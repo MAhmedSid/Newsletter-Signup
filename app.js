@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 
-
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -50,12 +49,13 @@ app.post('/', (req, res) => {
     }
 
     request(options, (error, response, body) => {
-        if (response.statusCode === 200) {
+        if (res.statusCode === 200) {
             res.sendFile(__dirname + "/success.html");
         }
             
         else {
             res.sendFile(__dirname + "/failure.html")
+            console.log(res.statusCode);
         }
     })
 
