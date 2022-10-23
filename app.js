@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const request = require('request');
+const request = require('request'); 
 
 const app = express();
 
@@ -49,14 +49,17 @@ app.post('/', (req, res) => {
     }
 
     request(options, (error, response, body) => {
+        if(error){
+            console.log(error);
+        }
+        else{ 
         if (res.statusCode === 200) {
             res.sendFile(__dirname + "/success.html");
-        }
-            
+        } 
         else {
             res.sendFile(__dirname + "/failure.html")
             console.log(res.statusCode);
-        }
+        } }
     })
 
 })
