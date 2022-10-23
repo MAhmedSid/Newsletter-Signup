@@ -43,7 +43,7 @@ app.post('/', (req, res) => {
         url: "https://us13.api.mailchimp.com/3.0/lists/fa3bda3107",
         method: "POST",
         headers: {
-            "Authorization": "myapikey 47dc6d31d6e05862e08f406a42678854-us13",
+            "Authorization": "myapikey d41702ed3f997d48ad98addeaecb8ffe-us13",
         },
         body: JSONdata,
     }
@@ -68,7 +68,7 @@ app.post('/', (req, res) => {
 app.post("/failure", (req,res)=>{
     res.redirect("/");
 })
-// api key: 47dc6d31d6e05862e08f406a42678854-us13
+// api key: d41702ed3f997d48ad98addeaecb8ffe-us13 
 // list unique id:  fa3bda3107
 
 
